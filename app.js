@@ -1,11 +1,12 @@
 const express = require('express');
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 const sequelize = require('./config/db');
 
 const userRoute = require('./routes/user');
-
-app.get("/", userRoute);
+app.use(express.json());
+app.use('/', userRoute);
 
 sequelize.sync() //sync models to DB
     .then(result => {
