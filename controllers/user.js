@@ -40,4 +40,6 @@ const getUserbyId = async (req, res, next) => {
    }
 
 }
-module.exports = { getHome, getUser, postUser, getUserbyId }
+
+
+module.exports = { getHome, getUser, postUser, getUserbyId}
